@@ -1,11 +1,10 @@
 package model.threads.generator;
 
+import model.Logger;
 import model.config.ConfigGenerator;
 import model.dataobjects.Client;
 import model.dataobjects.File;
 import model.enums.TypeFileBySize;
-import model.time.Sleepyhead;
-import org.apache.commons.lang3.time.StopWatch;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -28,42 +27,15 @@ public class ClientsGenerator implements Runnable {
     private TimeUnit timeUnitForDuration;
     private ReceiverInformationAboutActivation clientsReceiver;
     private LocalDateTime startLocalDataTime;
-    private LocalDateTime lastTimeGeneration;
     private long timePauseDuration;
     private TimeUnit timeUnitForPause;
     private Random random = new Random();
 
-    public ClientsGenerator(double probabilityRandomHeavyFile,
-                            double probabilityRandomMediumFile,
-                            double probabilityRandomLightFile,
-                            int thresholdBetweenLightAndMediumFile,
-                            int thresholdBetweenMediumAndHeavyFile,
-                            int maxSizeOfFile,
-                            int howManyFilesCanBeHaveClient,
-                            int howManyClientsCanGenerate,
-                            long timeDuration,
-                            TimeUnit timeUnitForDuration,
-                            long timePauseDuration,
-                            TimeUnit timeUnitForPause) {
-        this.probabilityRandomHeavyFile = probabilityRandomHeavyFile;
-        this.probabilityRandomMediumFile = probabilityRandomMediumFile;
-        this.probabilityRandomLightFile = probabilityRandomLightFile;
-        this.thresholdBetweenLightAndMediumFile = thresholdBetweenLightAndMediumFile;
-        this.thresholdBetweenMediumAndHeavyFile = thresholdBetweenMediumAndHeavyFile;
-        this.maxSizeOfFile = maxSizeOfFile;
-        this.howManyFilesCanBeHaveClient = howManyFilesCanBeHaveClient;
-        this.howManyClientsCanGenerate = howManyClientsCanGenerate;
-        this.timeDuration = timeDuration;
-        this.timeUnitForDuration = timeUnitForDuration;
-        this.timePauseDuration = timePauseDuration;
-        this.timeUnitForPause = timeUnitForPause;
-        Thread.currentThread().setName("CLIENTS_GENERATOR");
-    }
+    public ClientsGenerator(ConfigGenerator configGenerator) {
 
-    public ClientsGenerator(ConfigGenerator configGenerator){
-        this.probabilityRandomHeavyFile = configGenerator.getProbabilityRandomHeavyFile();
-        this.probabilityRandomMediumFile = configGenerator.getProbabilityRandomMediumFile();
-        this.probabilityRandomLightFile = configGenerator.getProbabilityRandomLightFile();
+        this.probabilityRandomHeavyFile = configGenerator.getProbabilityRandomHeavyFile() / 100;
+        this.probabilityRandomMediumFile = configGenerator.getProbabilityRandomMediumFile() / 100;
+        this.probabilityRandomLightFile = configGenerator.getProbabilityRandomLightFile() / 100;
         this.thresholdBetweenLightAndMediumFile = configGenerator.getThresholdBetweenLightAndMediumFile();
         this.thresholdBetweenMediumAndHeavyFile = configGenerator.getThresholdBetweenMediumAndHeavyFile();
         this.maxSizeOfFile = configGenerator.getMaxSizeOfFile();
@@ -93,9 +65,9 @@ public class ClientsGenerator implements Runnable {
             diff = ChronoUnit.NANOS.between(startLocalDataTime, now);
         }
         clientsReceiver.receiveInfoAboutActive(false);
-        System.out.println("Koniec Generowania");
-        System.out.println("Stop generator thread");
-}
+        Logger.getInstance().log("Koniec Generowania");
+        Logger.getInstance().log("Stop generator thread");
+    }
 
     private void sleep(long milliseconds) {
         if (milliseconds > 0) {
@@ -109,11 +81,11 @@ public class ClientsGenerator implements Runnable {
     }
 
     private List<Client> generate() {
-        int numberOfFiles = random.nextInt(howManyFilesCanBeHaveClient);
         List<Client> listGeneratedOfClients = new ArrayList<>();
-        int numberOfClients = random.nextInt(howManyClientsCanGenerate);
+        int numberOfClients = random.nextInt(howManyClientsCanGenerate - 1) + 1;
         for (int iteratorClient = 0; iteratorClient < numberOfClients; iteratorClient++) {
             List<File> listGeneratedOfFiles = new ArrayList<>();
+            int numberOfFiles = random.nextInt(howManyFilesCanBeHaveClient - 1) + 1;
             for (int iteratorFile = 0; iteratorFile < numberOfFiles; iteratorFile++) {
                 TypeFileBySize typeOfFile = randomTypeFileBySize();
                 int sizeOfFile = randomSizeAccordingWithTypeOfFile(typeOfFile);
@@ -132,7 +104,7 @@ public class ClientsGenerator implements Runnable {
                 break;
             }
             case MEDIUM: {
-                size = random.nextInt(thresholdBetweenLightAndMediumFile) + thresholdBetweenMediumAndHeavyFile;
+                size = random.nextInt(thresholdBetweenLightAndMediumFile) + (thresholdBetweenMediumAndHeavyFile - thresholdBetweenLightAndMediumFile);
                 break;
             }
             case LARGE: {
@@ -148,8 +120,7 @@ public class ClientsGenerator implements Runnable {
     private TypeFileBySize randomTypeFileBySize() {
         final double probability = random.nextDouble();
         List<Double> probabilityOfLists = Arrays.asList(probabilityRandomLightFile,
-                probabilityRandomLightFile + probabilityRandomMediumFile,
-                probabilityRandomMediumFile + probabilityRandomHeavyFile);
+                probabilityRandomLightFile + probabilityRandomMediumFile);
         int index = 0;
         for (Double probabilityForFile : probabilityOfLists) {
             if (probability <= probabilityForFile) {

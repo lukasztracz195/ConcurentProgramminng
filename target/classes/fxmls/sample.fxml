@@ -1,10 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.202" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="934.0" prefWidth="1384.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerOfSimulation">
    <children>
-      <Button layoutX="230.0" layoutY="170.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="141.0" text="Hello World" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="250.0" />
+      <SplitPane dividerPositions="0.5664983164983165" layoutX="14.0" layoutY="-2.0" prefHeight="551.0" prefWidth="1374.0" style="-fx-background-color: #b0bec5;" AnchorPane.bottomAnchor="378.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <items>
+          <AnchorPane prefHeight="771.0" prefWidth="639.0">
+               <children>
+                  <GridPane prefHeight="211.0" prefWidth="592.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="49.0" prefWidth="128.0" text="DISC 0" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="49.0" prefWidth="128.0" text="DISC 1" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="49.0" prefWidth="128.0" text="DISC 3" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="49.0" prefWidth="128.0" text="DISC 2" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="128.0" text="DISC 4" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="discZeroListSavedOfFiles" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                        <ListView fx:id="discOneListSavedOfFiles" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ListView fx:id="discTwoListSavedOfFiles" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <ListView fx:id="discThreeListSavedOfFiles" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <ListView fx:id="discFourListSavedOfFiles" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="7.0" layoutY="211.0" prefHeight="120.0" prefWidth="577.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="74.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="65.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="54.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="97.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="365.0" minWidth="10.0" prefWidth="365.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="145.0" style="-fx-background-color: #43a047;" text="DISC" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="145.0" style="-fx-background-color: #ce93d8;" text="CLIENT_ID" GridPane.columnIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="145.0" style="-fx-background-color: #38B0DE;" text="FILE_ID" GridPane.columnIndex="2" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="331.0" text="SAVING FILE_PROGRESS" GridPane.columnIndex="4" />
+                        <Label alignment="CENTER" prefHeight="44.0" prefWidth="159.0" style="-fx-background-color: #b9f6ca;" text="DISC_0" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" prefHeight="44.0" prefWidth="159.0" style="-fx-background-color: #b9f6ca;" text="DISC_1" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" prefHeight="44.0" prefWidth="159.0" style="-fx-background-color: #b9f6ca;" text="DISC_2" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" prefHeight="44.0" prefWidth="159.0" style="-fx-background-color: #b9f6ca;" text="DISC_3" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER" prefHeight="44.0" prefWidth="159.0" style="-fx-background-color: #b9f6ca;" text="DISC_4" GridPane.rowIndex="5" />
+                        <Label fx:id="labelClientIdForDiscZero" alignment="CENTER" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #e1bee7;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelClientIdForDiscOne" alignment="CENTER" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #e1bee7;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelClientIdForDiscTwo" alignment="CENTER" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #e1bee7;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelClientIdForDiscThree" alignment="CENTER" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #e1bee7;" text="3" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelClientIdForDiscFour" alignment="CENTER" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #e1bee7;" text="4" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="labelFileIdForDiscZero" alignment="CENTER" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #ADEAEA;" text="325" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="labelFileIdForDiscOne" alignment="CENTER" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #ADEAEA;" text="45" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label fx:id="labelFileIdForDiscTwo" alignment="CENTER" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #ADEAEA;" text="235" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label fx:id="labelFileIdForDiscThree" alignment="CENTER" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #ADEAEA;" text="25" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label fx:id="labelFileIdForDiscFour" alignment="CENTER" prefHeight="41.0" prefWidth="119.0" style="-fx-background-color: #ADEAEA;" text="23" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="221.0" style="-fx-background-color: #6699ff;" text="TYPE_FILE_BY_SIZE" GridPane.columnIndex="3" />
+                        <ProgressBar fx:id="progressBarDiscZero" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="287.0" progress="0.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <ProgressBar fx:id="progressBarDiscOne" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="287.0" progress="0.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <ProgressBar fx:id="progressBarDiscTwo" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="287.0" progress="0.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <ProgressBar fx:id="progressBarDiscThree" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="287.0" progress="0.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <ProgressBar fx:id="progressBarDiscFour" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="287.0" progress="0.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <Label fx:id="labelTypeOfFileForDiscZero" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="119.0" style="-fx-background-color: #99ccff;" text="HAVY" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label fx:id="labelTypeOfFileForDiscOne" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="119.0" style="-fx-background-color: #99ccff;" text="LIGHT" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label fx:id="labelTypeOfFileForDiscTwo" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="119.0" style="-fx-background-color: #99ccff;" text="MEDIUM" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label fx:id="labelTypeOfFileForDiscThree" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="119.0" style="-fx-background-color: #99ccff;" text="LIGHT" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label fx:id="labelTypeOfFileForDiscFour" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="119.0" style="-fx-background-color: #99ccff;" text="LIGHT" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="14.0" layoutY="335.0" prefHeight="182.0" prefWidth="761.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="45.0" minHeight="15.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="182.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="19.0" prefWidth="333.0" text="CLIENTS_WAITING_ON_SERVING" GridPane.columnIndex="1" />
+                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="333.0" text="CLIENTS_SERVED" />
+                        <ListView fx:id="listViewOnClientsWaitingOnServing" maxHeight="1.7976931348623157E308" prefHeight="64.0" prefWidth="380.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ListView fx:id="listViewOnClientsServed" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="843.0" prefWidth="589.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-3.0" layoutY="6.0" prefHeight="30.0" prefWidth="485.0" style="-fx-background-color: #78909c;" text="CONTROL PANEL OF SIMULATION" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <GridPane layoutX="-2.0" layoutY="28.0" prefHeight="338.0" prefWidth="590.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.0" minWidth="10.0" prefWidth="433.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="0.0" prefWidth="52.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="38.0" prefWidth="426.0" style="-fx-background-color: #c8e6c9;" text="NUMBER_OF_DISCS" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" disable="true" prefHeight="49.0" prefWidth="180.0" text="5" GridPane.columnIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="23.0" style="-fx-background-color: #c8e6c9;" text="PROBABILITY_RANDOM_HAVY_FILE" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="24.0" style="-fx-background-color: #c8e6c9;" text="PROBABILITY_RANDOM_MEDIUM_FILE" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="24.0" style="-fx-background-color: #c8e6c9;" text="PROBABILITY_RANDOM_LIGHT_FILE" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="24.0" style="-fx-background-color: #c8e6c9;" text="MAX_SIZE_OF_FILE" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="24.0" style="-fx-background-color: #c8e6c9;" text="MIN_SIZE_OF_FILE" GridPane.rowIndex="5" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" disable="true" prefHeight="49.0" prefWidth="180.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="24.0" style="-fx-background-color: #c8e6c9;" text="MAXIMUM NUMBER OF FILES THAT THE CUSTOMER MAY HAVE" GridPane.rowIndex="6" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="24.0" style="-fx-background-color: #c8e6c9;" text="MAXIMUM NUMBER OF CUSTOMERS GENERATED AT A TIME" GridPane.rowIndex="7" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="24.0" style="-fx-background-color: #c8e6c9;" text="NUMBER_OF_TIME_UNITS_TO_DURATION_GENERATE_PROCESS" GridPane.rowIndex="8" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="24.0" style="-fx-background-color: #c8e6c9;" text="TIME_UNITS_TO_DURATION_GENERATE_PROCESS" GridPane.rowIndex="9" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="24.0" style="-fx-background-color: #c8e6c9;" text="NUMBER_OF_TIME_UNITS_TO_DURATION_OF_PAUSE_GENERATE_PROC" GridPane.rowIndex="10" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="24.0" style="-fx-background-color: #c8e6c9;" text="TIME_UNITS_TO_DURATION_OF_PAUSE_IN_GENERATE_PROCESS" GridPane.rowIndex="11" />
+                        <ChoiceBox fx:id="choiceBoxOnTimeUnitsForDurationGenerateProcess" maxWidth="1.7976931348623157E308" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <ChoiceBox fx:id="choiceBoxOnTimeUnitsForDurationOfPauseInGenerateProcess" maxWidth="1.7976931348623157E308" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                        <TextField fx:id="inputfieldOnProbabilityradnomHavyFile" text="30" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="inputfieldOnProbabilityradnomMediumFile" text="30" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="inputfieldOnProbabilityradnomLightFile" text="40" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="inputfieldOnMaxSizeOfFile" text="100" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="inputfieldOnMaxNumberOfFilesForClient" text="100" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="inputfieldOnMaxNumberOfClientsGeneratedInTheSameTime" text="100" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="inputfieldOnNumberOfTimeUnitsToDurationOfPauseInGenrateProcess" text="10" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <TextField fx:id="inputfieldOnNumberOfTimeUnitsToDurationGenrateProcess" text="60" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="5.0" layoutY="400.0" prefHeight="120.0" prefWidth="478.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="buttonStartSimulation" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#startSimulation" prefHeight="17.0" prefWidth="587.0" style="-fx-background-color: #00ee00;" text="START _SIMULATION" />
+                        <Button fx:id="buttonStopSimulation" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#stopSimulation" prefHeight="11.0" prefWidth="590.0" style="-fx-background-color: #f44336;" text="STOP_SIMULATION" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="57.0" prefWidth="648.0" style="-fx-background-color: #81d4fa;" text="TIME DURATION_OF_SIMULATION" textAlignment="CENTER" GridPane.rowIndex="1" />
+                        <Label fx:id="labelOnTimeSimulation" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="57.0" prefWidth="648.0" style="-fx-background-color: #ADEAEA;" text="00:00:00" textAlignment="CENTER" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <Label fx:id="labelErrorMessage" alignment="CENTER" layoutX="97.0" layoutY="366.0" maxHeight="1.7976931348623157E308" prefHeight="39.0" prefWidth="524.0" style="-fx-background-color: #ffffcc;" text="PLEASE_ON_ERROR_MESAGES" textFill="RED" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <GridPane layoutY="520.0" prefHeight="317.0" prefWidth="498.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <AnchorPane layoutX="14.0" layoutY="552.0" prefHeight="338.0" prefWidth="1369.0" style="-fx-background-color: #b0bec5;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <children>
+            <GridPane layoutX="2.0" layoutY="219.0" prefHeight="114.0" prefWidth="1367.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="5.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="96.0" minHeight="0.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ListView fx:id="listViewOnLogs" prefHeight="51.0" prefWidth="667.0" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="1364.0" text="CONSOLE LOGS" textAlignment="CENTER">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

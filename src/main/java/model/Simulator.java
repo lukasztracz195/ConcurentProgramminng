@@ -1,25 +1,31 @@
 package model;
 
+import javafx.application.Platform;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import lombok.Getter;
-import model.algorithms.AlgorithmWage;
 import model.algorithms.SetWageAlgorithm;
 import model.config.ConfigGenerator;
+import model.dataobjects.ViewObjectForDisc;
 import model.observer.Observer;
 import model.threads.disc.Disc;
 import model.threads.generator.ClientsGenerator;
 import model.threads.loadbalancer.LoadBalancer;
 import model.threads.warehouse.Warehouse;
+import org.apache.commons.lang3.time.StopWatch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @Getter
 
-public class Simulator implements Simulation{
+public class Simulator implements Simulation {
 
     private ClientsGenerator clientsGenerator;
     private List<Disc> discs;
@@ -30,22 +36,34 @@ public class Simulator implements Simulation{
     private ExecutorService executor;
     private final int numberOfNecessaryFunctionalThreads = 3;
     private List<Runnable> threads;
-    private List<Runnable> stoppedThreads;
+    private List<Runnable> stoppedThreads = new ArrayList<>();
     private boolean simulationIsRunning = false;
+    private StopWatch stopWatch;
+    private Label labelOnTimeSimulation;
+    private Button start;
+    private Button stop;
 
-    public  Simulator(ConfigGenerator configGenerator, int numberOfDiscs, SetWageAlgorithm algorithmToSetWageForClients){
+    private Map<Integer, ViewObjectForDisc> viewControlsForDiscsMap;
+
+    public Simulator(ConfigGenerator configGenerator, int numberOfDiscs, SetWageAlgorithm algorithmToSetWageForClients,
+                     Map<Integer, ViewObjectForDisc> viewControlsForDiscsMap, Label labelOnTimeSimulation) {
         this.clientsGenerator = new ClientsGenerator(configGenerator);
         this.discs = prepareDiscs(numberOfDiscs);
         this.numberOfDiscs = numberOfDiscs;
         this.warehouse = new Warehouse();
         this.algorithmToSetWageForClients = algorithmToSetWageForClients;
-        this.loadBalancer = new LoadBalancer(algorithmToSetWageForClients,warehouse,discs.size());
+        this.algorithmToSetWageForClients.setConfigGenerator(configGenerator);
+        this.algorithmToSetWageForClients.setStatisticWarehouse(warehouse);
+        this.loadBalancer = new LoadBalancer(algorithmToSetWageForClients, warehouse, discs.size());
+        this.viewControlsForDiscsMap = viewControlsForDiscsMap;
+        this.labelOnTimeSimulation = labelOnTimeSimulation;
     }
 
     @Override
     public void run() {
         simulationIsRunning = true;
-        bindLoadBalancerToDiscs(discs,loadBalancer);
+        loadBalancer.setLabelOnTimeSimulation(labelOnTimeSimulation);
+        bindLoadBalancerToDiscs(discs, loadBalancer);
         clientsGenerator.setClientsReceiver(warehouse);
         executor = Executors.newFixedThreadPool(numberOfNecessaryFunctionalThreads + discs.size());
 
@@ -54,23 +72,46 @@ public class Simulator implements Simulation{
         for (Runnable thread : threads) {
             executor.execute(thread);
         }
+        start.setDisable(true);
+        stop.setDisable(false);
     }
 
     @Override
-    public void stop() {
-       stoppedThreads = executor.shutdownNow();
+    public void stop() { ;
+        executor.shutdown();
+        try {
+            if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
+                executor.shutdownNow();
+            }
+        } catch (InterruptedException ex) {
+            executor.shutdownNow();
+            Thread.currentThread().interrupt();
+        }
         simulationIsRunning = false;
+        start.setDisable(false);
+        stop.setDisable(true);
     }
 
     @Override
     public boolean isStopped() {
-        if(stoppedThreads.size() == numberOfNecessaryFunctionalThreads + discs.size()){
-            List<Thread> threads = stoppedThreads.stream().map(Thread::new).collect(Collectors.toList());
-            return threads.stream().noneMatch(f->f.getState() == Thread.State.RUNNABLE);
-        }
-        return !simulationIsRunning;
+            return !simulationIsRunning;
     }
 
+    public Disc getDisc(int numberOfDisc) {
+        return discs.get(numberOfDisc);
+    }
+
+    public Warehouse getWareHouse() {
+        return warehouse;
+    }
+
+    public void setStart(Button start) {
+        this.start = start;
+    }
+
+    public void setStop(Button stop) {
+        this.stop = stop;
+    }
 
     private List<Disc> prepareDiscs(int numberOfDiscs) {
         List<Disc> discs = new ArrayList<>();
@@ -83,6 +124,7 @@ public class Simulator implements Simulation{
     private void bindLoadBalancerToDiscs(List<Disc> discs, Observer observer) {
         for (Disc disc : discs) {
             disc.attach(observer);
+            disc.setViewObjectForDisc(viewControlsForDiscsMap.get(disc.getNumberOfDisc()));
         }
     }
 }

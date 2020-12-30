@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit;
 @Builder
 public class ConfigGenerator {
 
-    private double probabilityRandomHeavyFile;
-    private double probabilityRandomMediumFile;
-    private double probabilityRandomLightFile;
+    private int probabilityRandomHeavyFile;
+    private int probabilityRandomMediumFile;
+    private int probabilityRandomLightFile;
     private int thresholdBetweenLightAndMediumFile;
     private int thresholdBetweenMediumAndHeavyFile;
     private int maxSizeOfFile;
@@ -25,5 +25,21 @@ public class ConfigGenerator {
     private long timePauseDuration;
     private TimeUnit timeUnitForPause;
 
-
+    @Override
+    public String toString() {
+        return "ConfigGenerator{" +
+                "probabilityRandomHeavyFile=" + probabilityRandomHeavyFile +
+                ", probabilityRandomMediumFile=" + probabilityRandomMediumFile +
+                ", probabilityRandomLightFile=" + probabilityRandomLightFile +
+                ", thresholdBetweenLightAndMediumFile=" + thresholdBetweenLightAndMediumFile +
+                ", thresholdBetweenMediumAndHeavyFile=" + thresholdBetweenMediumAndHeavyFile +
+                ", maxSizeOfFile=" + maxSizeOfFile +
+                ", howManyFilesCanBeHaveClient=" + howManyFilesCanBeHaveClient +
+                ", howManyClientsCanGenerate=" + howManyClientsCanGenerate +
+                ", timeDuration=" + timeDuration +
+                ", timeUnitForDuration=" + timeUnitForDuration +
+                ", timePauseDuration=" + timePauseDuration +
+                ", timeUnitForPause=" + timeUnitForPause +
+                '}';
+    }
 }

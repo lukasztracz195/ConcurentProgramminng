@@ -1,6 +1,10 @@
 package model.dataobjects;
 
+import javafx.application.Platform;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import lombok.Getter;
+import model.Logger;
 import model.enums.StatusOfFile;
 import model.enums.TypeFileBySize;
 import model.time.Sleepyhead;
@@ -24,6 +28,8 @@ public class File implements FileofData, Sleepyhead, Comparable<File> {
     private LocalDateTime timeStartSavingOfFile;
     private LocalDateTime timeFinishOfSavingFile;
     private int idDiscWhereIsSavedFile;
+    private Label labelFileId;
+    private ProgressBar progressBar;
 
     public File(final int size, final TypeFileBySize typeFileBySize) {
         this.initialSize = size;
@@ -35,18 +41,31 @@ public class File implements FileofData, Sleepyhead, Comparable<File> {
         staticNumberOfFile++;
     }
 
+    public void setLabelFileId(Label labelFileId) {
+        this.labelFileId = labelFileId;
+    }
+
+    public void setProgressBar(ProgressBar progressBar) {
+        this.progressBar = progressBar;
+    }
+
     @Override
     public void save(int discId) {
         timeStartSavingOfFile = LocalDateTime.now();
         statusOfFile = StatusOfFile.SAVING;
-        System.out.println(String.format("Start saving file ID(%d) with size: %d %s",
-                uniqueNumberOfFile, size ,LocalDateTime.now().format(formatter)));
+        Logger.getInstance().log(String.format("%s|FILE[%d]WAITING_ON_SAVE->SAVING|SizeOfFile[%d]",
+                LocalDateTime.now().format(formatter), uniqueNumberOfFile, size));
         while (size > 0) {
             sleep(TIME_SLEEP_IN_MILLISECONDS);
+            if(progressBar != null){
+                Platform.runLater(() ->
+                        progressBar.setProgress(Math.abs((size/(double)initialSize)-1.0)));
+
+            }
             size--;
         }
-        System.out.println(String.format("Finish saving file ID(%d) with size: %d %s",uniqueNumberOfFile,initialSize,
-                LocalDateTime.now().format(formatter)));
+        Logger.getInstance().log(String.format("%s|FILE[%d]SAVING->SAVED|SizeOfFile[%d]",
+                LocalDateTime.now().format(formatter), uniqueNumberOfFile, size));
         statusOfFile = StatusOfFile.SAVED;
         timeFinishOfSavingFile = LocalDateTime.now();
         idDiscWhereIsSavedFile = discId;
@@ -66,5 +85,10 @@ public class File implements FileofData, Sleepyhead, Comparable<File> {
     @Override
     public int compareTo(File o) {
         return Integer.compare(this.size, o.getSize());
+    }
+
+    @Override
+    public String toString(){
+        return String.format("ID:%d|SIZE:%d",uniqueNumberOfFile, initialSize);
     }
 }

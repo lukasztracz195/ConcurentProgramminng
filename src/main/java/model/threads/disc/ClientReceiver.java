@@ -12,4 +12,6 @@ public interface ClientReceiver extends StopThread {
     Optional<Client> getServingClient();
 
     void deleteClient();
+
+    int getNumberOfDisc();
 }

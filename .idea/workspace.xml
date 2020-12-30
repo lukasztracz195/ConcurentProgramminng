@@ -2,48 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Simulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Simulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmMinSizeFirst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmWage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/algorithms/SetWageAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/config/ConfigGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/dataobjects/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/dataobjects/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/dataobjects/FileofData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/dataobjects/Servceable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/enums/StatusOfClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/enums/StatusOfDisc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/enums/StatusOfFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/enums/TypeFileBySize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/observer/Subscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/Simulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/StopThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/disc/ClientReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/disc/DeleteClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/disc/Disc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/generator/ClientsGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/generator/ReceiverInformationAboutActivation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/ClientsReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/warehouse/ClientsReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/warehouse/ClientsSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/warehouse/ClientsSupplierReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/time/Sleepyhead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/JavaFX8-maven-template.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/DataParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/parsers/DoubleParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/parsers/IntegerParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/singletons/ViewSingletone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/validators/AbstractValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/validators/ProbabilitySizeOfFilesValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/validators/StringToDoubleValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/validators/StringToIntegerValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/validators/StringValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/validators/Validator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dataobjects/ViewObjectForDisc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/exceptions/ClientWasStarvedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/statistics/HistroyOfJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/statistics/StatisticCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/statistics/StatisticNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/threads/warehouse/IOStatistics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_16.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaFX8-maven-template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaFX8-maven-template.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ControllerOfSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Simulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmMinSizeFirst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmWage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmWage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/algorithms/SetWageAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/algorithms/SetWageAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/config/ConfigGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/config/ConfigGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dataobjects/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dataobjects/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dataobjects/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dataobjects/File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/observer/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/observer/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/observer/Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/threads/disc/ClientReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/threads/disc/ClientReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/threads/disc/Disc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/threads/disc/Disc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/threads/generator/ClientsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/threads/generator/ClientsGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/time/Sleepyhead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/time/Sleepyhead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxmls/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxmls/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxmls/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxmls/sample.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,10 +101,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ControllerOfSimulation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="142" selection-start-line="142" selection-end-line="142" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10847#10848#0" expanded="true" />
+                <element signature="e#10929#10930#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/generator/ClientsGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1702">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="176">
+              <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,10 +139,58 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="149" selection-start-line="149" selection-end-line="149" />
+            <state relative-caret-position="251">
+              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1442#1443#0" expanded="true" />
+                <element signature="e#1495#1496#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="960">
+              <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Logger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1216#1217#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Simulator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3295#3296#0" expanded="true" />
+                <element signature="e#3340#3341#0" expanded="true" />
+                <element signature="e#3691#3692#0" expanded="true" />
+                <element signature="e#3725#3726#0" expanded="true" />
+                <element signature="e#3765#3766#0" expanded="true" />
+                <element signature="e#3797#3798#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,6 +210,14 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Koniec</find>
+      <find>WAITING_ON_REQUEST -&gt; BUSY</find>
+      <find>DISC[3]:WAITING_ON_REQUEST -&gt; BUSY</find>
+      <find>DISC[3]:WAITING_ON_REQUEST-&gt;BUSY</find>
+      <find>DISC[2]:WAITING_ON_REQUEST-&gt;BUSY</find>
+      <find>DISC[0]:WAITING_ON_REQUEST-&gt;BUSY</find>
+      <find>DISC[1]:WAITING_ON_REQUEST-&gt;BUSY</find>
+      <find>generowania</find>
+      <find>21, 21,</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -153,54 +231,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/styleshet.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxmls/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/model/enums/TypeFileBySize.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/model/enums/StatusOfFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/FileImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/FileData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/FileofData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Subscriber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/observer/AbstractSubscriber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/File.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/ClientReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/StopThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/Disc.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/Warehouse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/LoadBalancer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/ClientsReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/observer/Observer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/observer/Subscriber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/generator/GeneratorOfClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/warehouse/ClientsReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/algorithms/Algorithm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/algorithms/SetWageAlgorithm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmMinSizeFirst.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/time/Sleepyhead.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/warehouse/ClientsSupplierReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/generator/NotifierOfActive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/generator/ReceiverInformationAboutActivation.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/threads/Simulation.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/threads/warehouse/ClientsSupplier.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/enums/StatusOfDisc.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/threads/disc/DeleteClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/disc/ClientReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/generator/ClientsGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/dataobjects/FileofData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dataobjects/File.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/enums/StatusOfClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Simulation.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/model/statistics/DoubleSummaryStatistics.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/statistics/StatisticCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmMinSizeFirst.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/threads/warehouse/IOStatistics.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/algorithms/SetWageAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/statistics/StatisticNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/exceptions/ClientWasStarvedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/formatters/ProbabilityTextFormatter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/enums/ExpactationInputData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/DataParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/time/Sleepyhead.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/statistics/HistoryNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/threads/disc/ClientReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/statistics/HistroyOfJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/dataobjects/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmWage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/enums/StatusOfClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ControllerOfSimulation.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxmls/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/Validator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/validators/StringValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/validators/DoubleValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/parsers/Parser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/parsers/DoubleParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/validators/Validator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/validators/AbstractValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/validators/StringToDoubleValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/validators/StringToIntegerValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/parsers/IntegerParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/config/ConfigGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/validators/ProbabilitySizeOfFilesValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/singletons/ViewSingletone.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dto/ViewControlDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dataobjects/ViewObjectForDisc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dataobjects/File.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Logger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/threads/disc/Disc.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Simulation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/threads/generator/ClientsGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/ControllerOfSimulation.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Simulator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/config/ConfigGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -213,10 +294,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="351" />
+    <option name="y" value="-869" />
+    <option name="width" value="1152" />
+    <option name="height" value="626" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -228,7 +309,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,6 +340,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConcurentProgramminng" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurentProgramminng" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -269,7 +357,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="dataobjects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ConcurentProgramminng" type="b2602c69:ProjectViewProjectNode" />
@@ -290,10 +378,36 @@
               <item name="threads" type="462c0819:PsiDirectoryNode" />
               <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ConcurentProgramminng" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurentProgramminng" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="threads" type="462c0819:PsiDirectoryNode" />
+              <item name="loadbalancer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConcurentProgramminng" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurentProgramminng" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConcurentProgramminng" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurentProgramminng" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="fxmls" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,12 +478,19 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controllers.*" />
+          <option name="PATTERN" value="controllers.validators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Threads more min files" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="JavaFX8-maven-template" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -438,6 +559,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Threads more min files" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Maven.JavaFX8-maven-template" />
     </list>
@@ -463,18 +585,27 @@
       <workItem from="1607670083097" duration="97000" />
       <workItem from="1607935966122" duration="9020000" />
       <workItem from="1607946530887" duration="3971000" />
-      <workItem from="1607954770688" duration="31543000" />
+      <workItem from="1607954770688" duration="33530000" />
+      <workItem from="1608034578673" duration="17123000" />
+      <workItem from="1608147466919" duration="4979000" />
+      <workItem from="1608275916776" duration="8097000" />
+      <workItem from="1608311950765" duration="21825000" />
+      <workItem from="1608403226085" duration="11087000" />
+      <workItem from="1608472929910" duration="15805000" />
+      <workItem from="1608630959869" duration="30648000" />
+      <workItem from="1609000769749" duration="6745000" />
+      <workItem from="1609275423279" duration="5067000" />
+      <workItem from="1609283765495" duration="21837000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91623000" />
+    <option name="totallyTimeSpent" value="236823000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-1088" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2217484" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17910448" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -484,8 +615,8 @@
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4072883" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.624866" />
-      <window_info anchor="bottom" x="3840" y="23" width="1920" height="1027" id="Debug" maximized="true" order="3" type="WINDOWED" visible="true" weight="0.3504823" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37834942" />
+      <window_info anchor="bottom" x="2129" y="242" width="1498" height="254" id="Debug" maximized="true" order="3" weight="0.3397642" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -500,7 +631,7 @@
       <window_info anchor="bottom" id="Statistic" order="15" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" />
       <window_info anchor="bottom" id="Database Changes" order="17" />
-      <window_info anchor="bottom" id="Terminal" order="18" visible="true" weight="0.035369776" />
+      <window_info anchor="bottom" id="Terminal" order="18" visible="true" weight="0.1404073" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -516,7 +647,7 @@
       <window_info anchor="right" id="Bean Validation" order="12" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21748401" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17910448" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -525,9 +656,9 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.187567" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4072883" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.040728834" />
+      <window_info anchor="bottom" x="2129" y="242" width="1498" height="254" id="Debug" maximized="true" order="3" weight="0.3118971" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -537,12 +668,12 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3290461" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Statistic" order="15" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" />
       <window_info anchor="bottom" id="Database Changes" order="17" />
-      <window_info anchor="bottom" id="Terminal" order="18" />
+      <window_info anchor="bottom" id="Terminal" order="18" weight="0.1404073" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -569,106 +700,40 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java</url>
-          <line>34</line>
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/ControllerOfSimulation.java</url>
+          <line>142</line>
           <properties />
-          <option name="timeStamp" value="615" />
+          <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>54</line>
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/ControllerOfSimulation.java</url>
+          <line>141</line>
           <properties />
-          <option name="timeStamp" value="634" />
+          <option name="timeStamp" value="113" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>55</line>
+          <url>file://$PROJECT_DIR$/src/main/java/model/Simulator.java</url>
+          <line>79</line>
           <properties />
-          <option name="timeStamp" value="635" />
+          <option name="timeStamp" value="114" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>73</line>
+          <url>file://$PROJECT_DIR$/src/main/java/model/Simulator.java</url>
+          <line>89</line>
           <properties />
-          <option name="timeStamp" value="638" />
+          <option name="timeStamp" value="115" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>74</line>
+          <url>file://$PROJECT_DIR$/src/main/java/model/Simulator.java</url>
+          <line>91</line>
           <properties />
-          <option name="timeStamp" value="639" />
+          <option name="timeStamp" value="117" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>75</line>
+          <url>file://$PROJECT_DIR$/src/main/java/model/Simulator.java</url>
+          <line>90</line>
           <properties />
-          <option name="timeStamp" value="640" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="641" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>65</line>
-          <properties />
-          <option name="timeStamp" value="660" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="661" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="662" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="663" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>69</line>
-          <properties />
-          <option name="timeStamp" value="664" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="666" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java</url>
-          <line>83</line>
-          <properties />
-          <option name="timeStamp" value="667" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="668" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="669" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="670" />
+          <option name="timeStamp" value="118" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -678,6 +743,25 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>sum- epsilon</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>warehouseStatistic.getStatisticNode().stream().flatMapToDouble(f-&gt; DoubleStream.of(f.getAverageNumberOfMillisWaitingClientsOnSelectToAuction())).boxed().collect(Collectors.toList());</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>model.threads.warehouse.Warehouse,java.util.stream.DoubleStream,java.util.stream.Collectors</custom-info>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((Warehouse) warehouseStatistic).statisticsNodeList</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>model.threads.warehouse.Warehouse</custom-info>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="evaluateExpression">
       <expression>
         <expression-string>stopWatch.getTime(TimeUnit.MINUTES)</expression-string>
@@ -707,232 +791,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxmls/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/css/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2948">
-          <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/observer/AbstractSubscriber.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/TypeFileBySize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/StatusOfFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/StopThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/observer/Subscriber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dataobjects/Servceable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/generator/GeneratorOfClient.java" />
-    <entry file="uml://JAVA/model">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>model</OriginalElement>
-          <nodes>
-            <node x="" y="">model.enums.StatusOfFile</node>
-            <node x="" y="">model.threads.warehouse.ClientsReceiver</node>
-            <node x="" y="">model.threads.generator.ClientsGenerator</node>
-            <node x="" y="">model.threads.loadbalancer.LoadBalancer</node>
-            <node x="" y="">model.threads.warehouse.Warehouse</node>
-            <node x="" y="">model.dataobjects.Client</node>
-            <node x="" y="">model.time.Sleepyhead</node>
-            <node x="" y="">model.enums.TypeFileBySize</node>
-            <node x="" y="">model.dataobjects.FileofData</node>
-            <node x="" y="">model.threads.loadbalancer.ClientsReceiver</node>
-            <node x="" y="">model.threads.warehouse.ClientsSupplier</node>
-            <node x="" y="">model.threads.StopThread</node>
-            <node x="" y="">model.algorithms.SetWageAlgorithm</node>
-            <node x="" y="">model.threads.disc.ClientReceiver</node>
-            <node x="" y="">model.enums.StatusOfClient</node>
-            <node x="" y="">model.threads.disc.Disc</node>
-            <node x="" y="">model.dataobjects.File</node>
-            <node x="" y="">model.observer.Subscriber</node>
-            <node x="" y="">model.enums.StatusOfDisc</node>
-            <node x="" y="">model.observer.Observer</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="877.0" y="362.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/src.zip!/java/util/Observer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/ClientsReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmMinSizeFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/src.zip!/java/time/temporal/ChronoUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="271" selection-start-line="271" selection-end-line="271" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/ClientsSupplierReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/ClientsReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/Simulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/ClientsSupplier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/StatusOfDisc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="260" column="12" selection-start-line="260" selection-start-column="12" selection-end-line="260" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/disc/DeleteClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/observer/Observer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/time/Sleepyhead.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/jre/lib/rt.jar!/sun/nio/cs/StreamDecoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="227" selection-start-line="227" selection-end-line="227" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/src.zip!/java/util/concurrent/locks/LockSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="174" selection-start-line="174" selection-end-line="174" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/jre/lib/rt.jar!/sun/misc/Unsafe.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -958,138 +816,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/disc/ClientReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dataobjects/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-354">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmWage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="32" column="48" lean-forward="true" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dataobjects/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="66" column="38" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/disc/Disc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3105#3106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/algorithms/SetWageAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/StatusOfClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dataobjects/FileofData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/generator/ClientsGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/generator/ReceiverInformationAboutActivation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/config/ConfigGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Simulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1100,20 +830,408 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="367">
+          <caret line="137" column="7" lean-forward="true" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="96" column="30" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
+          <folding>
+            <element signature="e#2837#2838#0" expanded="true" />
+            <element signature="e#2866#2867#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="385" column="32" selection-start-line="385" selection-start-column="27" selection-end-line="385" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/src.zip!/java/lang/Long.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmMinSizeFirst.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/StatusOfClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/StatusOfFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/IOStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dataobjects/FileofData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        <state relative-caret-position="44">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/exceptions/ClientWasStarvedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="91" selection-start-line="11" selection-start-column="91" selection-end-line="11" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/formatters/ProbabilityTextFormatter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/ExpactationInputData.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/disc/ClientReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/time/Sleepyhead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/statistics/StatisticNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-497">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/statistics/HistroyOfJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="70" column="136" selection-start-line="70" selection-start-column="136" selection-end-line="70" selection-end-column="136" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/statistics/StatisticCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ControllerOfSimulation.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/parsers/Parser.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DataParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/validators/Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/validators/AbstractValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/PROGRAMY/JAVA/Java8/jdk/src.zip!/java/util/function/ToDoubleFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/validators/StringToDoubleValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding>
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/validators/StringToIntegerValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/parsers/DoubleParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#149#150#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/validators/StringValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/algorithms/SetWageAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/parsers/IntegerParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding>
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#190#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/config/ConfigGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxmls/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/algorithms/AlgorithmWage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/validators/ProbabilitySizeOfFilesValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dataobjects/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/singletons/ViewSingletone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dto/ViewControlDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1216#1217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/loadbalancer/LoadBalancer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/disc/Disc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6652#6653#0" expanded="true" />
+            <element signature="e#6687#6688#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/generator/ClientsGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1702">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ControllerOfSimulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10847#10848#0" expanded="true" />
+            <element signature="e#10929#10930#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Simulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3295#3296#0" expanded="true" />
+            <element signature="e#3340#3341#0" expanded="true" />
+            <element signature="e#3691#3692#0" expanded="true" />
+            <element signature="e#3725#3726#0" expanded="true" />
+            <element signature="e#3765#3766#0" expanded="true" />
+            <element signature="e#3797#3798#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dataobjects/ViewObjectForDisc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dataobjects/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+            <element signature="e#1621#1622#0" expanded="true" />
+            <element signature="e#3028#3029#0" expanded="true" />
+            <element signature="e#3074#3075#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/threads/warehouse/Warehouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1495#1496#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

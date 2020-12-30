@@ -4,7 +4,6 @@ import lombok.Getter;
 import model.enums.StatusOfClient;
 import model.enums.StatusOfFile;
 
-import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Collections;
@@ -15,85 +14,109 @@ import java.util.stream.IntStream;
 @Getter
 public class Client implements Comparable<Client> {
 
-    private List<File> files;
-    private double wage;
-    private long initialSizeOfFiles;
-    private static long iteratorOfNumberOfClient = 0;
-    private final long numberOfClient;
-    private StatusOfClient status;
-    private final LocalDateTime timeCreateOfClient;
-    private LocalDateTime timeLastFinishedAuction;
+    private static long staticIteratorOfTheNumberOfClient = 0;
 
-    public Client(List<File> files) {
-        this.timeCreateOfClient = LocalDateTime.now();
-        this.numberOfClient = iteratorOfNumberOfClient;
-        this.files = files;
-        Collections.sort(files);
-        this.initialSizeOfFiles = files.stream().flatMapToInt(f -> IntStream.of(f.getSize())).sum();
-        status = StatusOfClient.WAITING_ON_SERVING;
-        iteratorOfNumberOfClient++;
+    private List<File> fileList;
+    private double weight;
+    private long initialNumberOfFiles;
+    private final long numberOfClient;
+    private StatusOfClient statusOfClient;
+    private final LocalDateTime creationOfTime;
+    private LocalDateTime timeOfLastWinningAuction;
+
+    public Client(List<File> fileList) {
+        this.creationOfTime = LocalDateTime.now();
+        this.numberOfClient = staticIteratorOfTheNumberOfClient;
+        this.fileList = fileList;
+        Collections.sort(fileList);
+        this.initialNumberOfFiles = fileList.size();
+        statusOfClient = StatusOfClient.WAITING_ON_SERVING;
+        staticIteratorOfTheNumberOfClient++;
     }
 
     public Client(Client client) {
-        this.timeCreateOfClient = client.getTimeCreateOfClient();
+        this.creationOfTime = client.getCreationOfTime();
         this.numberOfClient = client.numberOfClient;
-        this.files = client.getFiles();
-        Collections.sort(files);
-        this.initialSizeOfFiles = files.stream().flatMapToInt(f -> IntStream.of(f.getSize())).sum();
-        status = StatusOfClient.WAITING_ON_SERVING;
+        this.fileList = client.getFileList();
+        Collections.sort(fileList);
+        this.initialNumberOfFiles = fileList.stream().flatMapToInt(f -> IntStream.of(f.getSize())).sum();
+        statusOfClient = StatusOfClient.WAITING_ON_SERVING;
     }
 
-    public void setStatus(StatusOfClient status) {
-        this.status = status;
+    public void setStatusOfClient(StatusOfClient statusOfClient) {
+        this.statusOfClient = statusOfClient;
     }
 
-    public void setWage(double wage) {
-        this.wage = wage;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
 
-    public long getNumberOfMillisFromLastFinishedAction() {
-        if (timeLastFinishedAuction == null) {
-            return Long.MAX_VALUE;
+    public Optional<Long> getNumberOfMillisFromLastFinishedAction() {
+        if (timeOfLastWinningAuction == null) {
+            return Optional.empty();
         }
         LocalDateTime current = LocalDateTime.now();
-        return ChronoUnit.MILLIS.between(timeLastFinishedAuction, current);
+        return Optional.of(ChronoUnit.MILLIS.between(timeOfLastWinningAuction, current));
+    }
+
+    public Long getNumberOfMillisFromCreateRequest() {
+
+        LocalDateTime current = LocalDateTime.now();
+        return ChronoUnit.MILLIS.between(creationOfTime, current);
     }
 
     public long getNumberOfFiles() {
-        return files.size();
+        return fileList.size();
     }
 
     public long getNumberOfFilesToSave() {
-        return files.stream().filter(f->f.getStatusOfFile() == StatusOfFile.WAITING_ON_SAVE).count();
+        return fileList.stream()
+                .filter(f->f.getStatusOfFile() == StatusOfFile.WAITING_ON_SAVE)
+                .count();
     }
 
-    public void setTimeLastFinishedAuction(LocalDateTime timeLastFinishedAuction) {
-        this.timeLastFinishedAuction = timeLastFinishedAuction;
+    public void setTimeOfLastWinningAuction(LocalDateTime timeOfLastWinningAuction) {
+        this.timeOfLastWinningAuction = timeOfLastWinningAuction;
     }
 
-    public Optional<File> getFile() {
-        if (files.isEmpty()) {
+    public Optional<File> getFileToSave() {
+        if (fileList.isEmpty()) {
             return Optional.empty();
         }
-        return files.stream()
+        return fileList.stream()
                 .filter(f -> f.getStatusOfFile() == StatusOfFile.WAITING_ON_SAVE)
                 .sorted()
                 .findFirst();
     }
 
     public long getSizeOfRequest() {
-        if (files == null) {
+        if (fileList.isEmpty()) {
             return 0;
         }
-        return files.stream()
+        return fileList.stream()
                 .filter(f -> f.getStatusOfFile() == StatusOfFile.WAITING_ON_SAVE)
                 .flatMapToInt(f -> IntStream.of(f.getSize()))
                 .sum();
     }
 
+
     @Override
     public int compareTo(Client o) {
-        return Double.compare(this.wage, o.getWage());
+        return Double.compare(this.weight, o.getWeight());
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                ", weight=" + weight +
+                ", initialNumberOfFiles=" + initialNumberOfFiles +
+                ", sizeOfRequest=" + getSizeOfRequest() +
+                ", numberOFilesToSave=" + getNumberOfFilesToSave()+
+                ", numberOfClient=" + numberOfClient +
+                ", statusOfClient=" + statusOfClient +
+                ", creationOfTime=" + creationOfTime +
+                ", timeOfLastWinningAuction=" + timeOfLastWinningAuction +
+                '}';
     }
 }
